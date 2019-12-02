@@ -1,0 +1,13 @@
+graph{flow:south;}
+[ make_prob_automaton ] -- WFA -->[ train_rnn_on_wfa ]
+[ make_paren_data ] -- words and values\n (weighted paren) --> [train_rnn_on_file]
+[make_word_dataset] -- words --> [train_rnn_on_wfa]
+[train_rnn_on_wfa] -- RNN --> [precalc_rnn]
+[train_rnn_on_wfa] -- RNN --> [rnn2wfa]
+[train_rnn_on_wfa] -- RNN --> [wrapup_rnn]
+[train_rnn_on_file] -- RNN --> [precalc_rnn]
+[train_rnn_on_file] -- RNN --> [rnn2wfa]
+[train_rnn_on_file] -- RNN --> [wrapup_rnn]
+[rnn2wfa] -- extracted WFAs --> [eval_perf]
+[precalc_rnn] -- outputs of the RNN --> [eval_perf]
+[eval_perf] -- statistics of the experiment --> [wrapup_eval]

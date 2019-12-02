@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+flake8 = "*"
+mypy = "*"
+numpy = "*"
+progressbar2 = "*"
+tensorflow-gpu = "*"
+keras = "*"
+typing-extensions = "*"
+sklearn = "*"
+cvxopt = "*"
+boto3 = "*"
+awscli = "*"
+requests = "*"
+flask = "*"
+graphviz = "*"
+
+[requires]
+python_version = "3.7"
