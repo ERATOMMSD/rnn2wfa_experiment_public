@@ -1,4 +1,4 @@
-# rnn2wfa_experiment
+# rnn2wfa_experiment_public
 
 ## What's this?
 An implementation of [1].  
